@@ -1,6 +1,8 @@
 //! ESI file schema.
 //!
 //! Generated from EtherCATBase.xsd and EtherCATInfo.xsd version 1.19 with david-boles/xsd-parser-rs xsd-parser-cli 693aa0ebc6ad582fee790be19e11b1d8ebae4671
+//!
+//! Then hand-modified. SlotType and ProfileType are currently not supported due to code generator issues.
 
 use std::str::FromStr;
 
@@ -8,6 +10,22 @@ use xsd_macro_utils::{UtilsDefaultSerde, UtilsTupleIo};
 use xsd_parser::generator::validator::Validate;
 use xsd_types::types as xs;
 use yaserde_derive::{YaDeserialize, YaSerialize};
+
+#[cfg(test)]
+mod tests {
+    use std::fs::{read_dir, File};
+
+    use crate::EtherCATInfo;
+
+    #[test]
+    fn deserializes_device_esi_files() {
+        for esi in read_dir("devices").expect("device ESI files not found") {
+            let path = esi.unwrap().path();
+            println!("Deserializing {}", path.display());
+            let _: EtherCATInfo = yaserde::de::from_reader(File::open(path).unwrap()).unwrap();
+        }
+    }
+}
 
 #[derive(Default, PartialEq, Debug, YaSerialize, YaDeserialize)]
 #[yaserde()]
@@ -249,13 +267,13 @@ pub mod sub_item_type {
             #[yaserde(rename = "RT")]
             Rt,
             #[yaserde(rename = "t")]
-            T,
+            TLower,
             #[yaserde(rename = "r")]
-            R,
+            RLower,
             #[yaserde(rename = "tr")]
-            Tr,
+            TrLower,
             #[yaserde(rename = "rt")]
-            Rt,
+            RtLower,
             __Unknown__(String),
         }
 
@@ -272,19 +290,19 @@ pub mod sub_item_type {
 
         pub enum SafetyMappingType {
             #[yaserde(rename = "si")]
-            Si,
+            SiLower,
             #[yaserde(rename = "SI")]
             Si,
             #[yaserde(rename = "so")]
-            So,
+            SoLower,
             #[yaserde(rename = "SO")]
             So,
             #[yaserde(rename = "sio")]
-            Sio,
+            SioLower,
             #[yaserde(rename = "SIO")]
             Sio,
             #[yaserde(rename = "sp")]
-            Sp,
+            SpLower,
             #[yaserde(rename = "SP")]
             Sp,
             __Unknown__(String),
@@ -643,13 +661,13 @@ pub mod object_type {
             #[yaserde(rename = "RT")]
             Rt,
             #[yaserde(rename = "t")]
-            T,
+            TLower,
             #[yaserde(rename = "r")]
-            R,
+            RLower,
             #[yaserde(rename = "tr")]
-            Tr,
+            TrLower,
             #[yaserde(rename = "rt")]
-            Rt,
+            RtLower,
             __Unknown__(String),
         }
 
@@ -666,19 +684,19 @@ pub mod object_type {
 
         pub enum SafetyMappingType {
             #[yaserde(rename = "si")]
-            Si,
+            SiLower,
             #[yaserde(rename = "SI")]
             Si,
             #[yaserde(rename = "so")]
-            So,
+            SoLower,
             #[yaserde(rename = "SO")]
             So,
             #[yaserde(rename = "sio")]
-            Sio,
+            SioLower,
             #[yaserde(rename = "SIO")]
             Sio,
             #[yaserde(rename = "sp")]
-            Sp,
+            SpLower,
             #[yaserde(rename = "SP")]
             Sp,
             __Unknown__(String),
@@ -1001,15 +1019,14 @@ pub struct ProfileType {
     #[yaserde(rename = "SubAddInfo")]
     pub sub_add_info: Option<i32>,
 
-    #[yaserde(rename = "ProfileTypeChoice")]
-    pub profile_type_choice: profile_type::ProfileTypeChoice,
+    // #[yaserde(rename = "ProfileTypeChoice")]
+    // pub profile_type_choice: profile_type::ProfileTypeChoice,
 
-    #[yaserde(rename = "ProfileTypeChoice")]
-    pub profile_type_choice: profile_type::ProfileTypeChoice,
+    // #[yaserde(rename = "ProfileTypeChoice")]
+    // pub profile_type_choice: profile_type::ProfileTypeChoice,
 
-    #[yaserde(rename = "ProfileTypeChoice")]
-    pub profile_type_choice: profile_type::ProfileTypeChoice,
-
+    // #[yaserde(rename = "ProfileTypeChoice")]
+    // pub profile_type_choice: profile_type::ProfileTypeChoice,
     #[yaserde(rename = "VendorSpecific")]
     pub vendor_specific: Option<VendorSpecificType>,
 }
@@ -1017,58 +1034,58 @@ pub struct ProfileType {
 impl Validate for ProfileType {}
 
 pub mod profile_type {
-    use super::*;
+    // use super::*;
 
-    #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
-    #[yaserde()]
+    // #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
+    // #[yaserde()]
 
-    pub enum ProfileTypeChoice {
-        ChannelCount(i32),
-        ChannelInfo,
-        __Unknown__(String),
-    }
+    // pub enum ProfileTypeChoice {
+    //     ChannelCount(i32),
+    //     ChannelInfo,
+    //     __Unknown__(String),
+    // }
 
-    impl Default for ProfileTypeChoice {
-        fn default() -> ProfileTypeChoice {
-            Self::__Unknown__("No valid variants".into())
-        }
-    }
+    // impl Default for ProfileTypeChoice {
+    //     fn default() -> ProfileTypeChoice {
+    //         Self::__Unknown__("No valid variants".into())
+    //     }
+    // }
 
-    impl Validate for ProfileTypeChoice {}
+    // impl Validate for ProfileTypeChoice {}
 
-    #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
-    #[yaserde()]
+    // #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
+    // #[yaserde()]
 
-    pub enum ProfileTypeChoice {
-        DictionaryFile(Option<String>),
-        Dictionary(Option<DictionaryType>),
-        __Unknown__(String),
-    }
+    // pub enum ProfileTypeChoice {
+    //     DictionaryFile(Option<String>),
+    //     Dictionary(Option<DictionaryType>),
+    //     __Unknown__(String),
+    // }
 
-    impl Default for ProfileTypeChoice {
-        fn default() -> ProfileTypeChoice {
-            Self::__Unknown__("No valid variants".into())
-        }
-    }
+    // impl Default for ProfileTypeChoice {
+    //     fn default() -> ProfileTypeChoice {
+    //         Self::__Unknown__("No valid variants".into())
+    //     }
+    // }
 
-    impl Validate for ProfileTypeChoice {}
+    // impl Validate for ProfileTypeChoice {}
 
-    #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
-    #[yaserde()]
+    // #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
+    // #[yaserde()]
 
-    pub enum ProfileTypeChoice {
-        DiagFile(Vec<String>),
-        DiagMessages(Option<DiagnosticsType>),
-        __Unknown__(String),
-    }
+    // pub enum ProfileTypeChoice {
+    //     DiagFile(Vec<String>),
+    //     DiagMessages(Option<DiagnosticsType>),
+    //     __Unknown__(String),
+    // }
 
-    impl Default for ProfileTypeChoice {
-        fn default() -> ProfileTypeChoice {
-            Self::__Unknown__("No valid variants".into())
-        }
-    }
+    // impl Default for ProfileTypeChoice {
+    //     fn default() -> ProfileTypeChoice {
+    //         Self::__Unknown__("No valid variants".into())
+    //     }
+    // }
 
-    impl Validate for ProfileTypeChoice {}
+    // impl Validate for ProfileTypeChoice {}
 }
 
 #[derive(Default, PartialEq, Debug, YaSerialize, YaDeserialize)]
@@ -1834,7 +1851,7 @@ pub mod ether_cat_info {
                     #[yaserde(attribute, rename = "Channel")]
                     pub channel: Option<i32>,
 
-                    pub base: ProfileType,
+                    pub base: crate::ProfileType,
                 }
 
                 impl Validate for ProfileType {}
@@ -2827,7 +2844,7 @@ pub mod ether_cat_info {
                     #[yaserde(attribute, rename = "AssignToPdi")]
                     pub assign_to_pdi: Option<bool>,
 
-                    pub base: EepromType,
+                    pub base: crate::EepromType,
                 }
 
                 impl Validate for EepromType {}
@@ -4876,12 +4893,11 @@ pub struct SlotType {
     #[yaserde(rename = "Name")]
     pub name: Vec<NameType>,
 
-    #[yaserde(rename = "SlotTypeChoice")]
-    pub slot_type_choice: slot_type::SlotTypeChoice,
+    // #[yaserde(rename = "SlotTypeChoice")]
+    // pub slot_type_choice: slot_type::SlotTypeChoice,
 
-    #[yaserde(rename = "SlotTypeChoice")]
-    pub slot_type_choice: slot_type::SlotTypeChoice,
-
+    // #[yaserde(rename = "SlotTypeChoice")]
+    // pub slot_type_choice: slot_type::SlotTypeChoice,
     #[yaserde(attribute, rename = "SlotGroup")]
     pub slot_group: Option<HexDecValue>,
 
@@ -4917,44 +4933,44 @@ pub struct SlotType {
 impl Validate for SlotType {}
 
 pub mod slot_type {
-    use super::*;
+    // use super::*;
 
-    #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
-    #[yaserde()]
+    // #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
+    // #[yaserde()]
 
-    pub enum SlotTypeChoice {
-        ModuleIdent,
-        ModuleClass,
-        __Unknown__(String),
-    }
+    // pub enum SlotTypeChoice {
+    //     ModuleIdent,
+    //     ModuleClass,
+    //     __Unknown__(String),
+    // }
 
-    impl Default for SlotTypeChoice {
-        fn default() -> SlotTypeChoice {
-            Self::__Unknown__("No valid variants".into())
-        }
-    }
+    // impl Default for SlotTypeChoice {
+    //     fn default() -> SlotTypeChoice {
+    //         Self::__Unknown__("No valid variants".into())
+    //     }
+    // }
 
-    impl Validate for SlotTypeChoice {}
+    // impl Validate for SlotTypeChoice {}
 
-    #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
-    #[yaserde()]
+    // #[derive(PartialEq, Debug, YaSerialize, YaDeserialize)]
+    // #[yaserde()]
 
-    pub enum SlotTypeChoice {
-        // obsolete
-        #[yaserde(rename = "Image16x14")]
-        Image16X14(Option<String>),
-        #[yaserde(rename = "ImageFile16x14")]
-        ImageFile16X14(Option<String>),
-        #[yaserde(rename = "ImageData16x14")]
-        ImageData16X14(Option<String>),
-        __Unknown__(String),
-    }
+    // pub enum SlotTypeChoice {
+    //     // obsolete
+    //     #[yaserde(rename = "Image16x14")]
+    //     Image16X14(Option<String>),
+    //     #[yaserde(rename = "ImageFile16x14")]
+    //     ImageFile16X14(Option<String>),
+    //     #[yaserde(rename = "ImageData16x14")]
+    //     ImageData16X14(Option<String>),
+    //     __Unknown__(String),
+    // }
 
-    impl Default for SlotTypeChoice {
-        fn default() -> SlotTypeChoice {
-            Self::__Unknown__("No valid variants".into())
-        }
-    }
+    // impl Default for SlotTypeChoice {
+    //     fn default() -> SlotTypeChoice {
+    //         Self::__Unknown__("No valid variants".into())
+    //     }
+    // }
 
-    impl Validate for SlotTypeChoice {}
+    // impl Validate for SlotTypeChoice {}
 }
