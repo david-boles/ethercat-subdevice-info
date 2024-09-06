@@ -1,0 +1,6612 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- See ETG2000 for element description -->
+<EtherCATInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.3" xsi:noNamespaceSchemaLocation="EtherCATInfo.xsd">
+	<Vendor FileVersion="1">
+		<Id>#x729</Id>
+		<Name>Cosworth Group</Name>
+		<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFF876666678FFFFF8677888887768FF76888876667876886888867FFF768767788877FFFFF7668678876FFFFFFFFFF688876FFFFFFFFFF688876FFFFFFFFFF678876FFFFFFFF8F7788877FFFFFF66786888867FFF76776F867888766678876FF86678888888876FFFF876666666667</ImageData16x14>
+	</Vendor>
+	<Descriptions>
+		<Groups>
+			<Group SortOrder="0">
+				<Type>AnaIn</Type>
+				<Name LcId="1031">Analoge Eingangsklemmen (EAIxx)</Name>
+				<Name LcId="1033">Analog Input Terminals (EAIxx)</Name>
+				<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00666666666666666660000000000000066222222222222206622222222FF222066222222FF22F220662F2222F2222F20662F2222F2222F206622FFFF222222206622222222222220662222222222222066000000777777006666666622222276666666660000006666666666666666666</ImageData16x14>
+			</Group>
+		</Groups>
+		<Devices>
+			<Device Physics="YY">
+				<!-- Note: product code and revision number needs to match code -->
+				<!-- Product code: 01M-606060 -->
+				<Type ProductCode="#x00093f6c" RevisionNo="#x00000001">EAI32-001</Type>
+				<Name LcId="1031">EAI32-001 32K. Ana. Eingang +/-10V</Name>
+				<Name LcId="1033">EAI32-001 32Ch. Ana. Input +/-10V</Name>
+				<Info>
+					<StateMachine>
+						<Timeout>
+							<PreopTimeout>300</PreopTimeout>
+							<SafeopOpTimeout>1500</SafeopOpTimeout>
+							<BackToInitTimeout>500</BackToInitTimeout>
+							<BackToSafeopTimeout>200</BackToSafeopTimeout>
+						</Timeout>
+					</StateMachine>
+					<Mailbox>
+						<Timeout>
+						<RequestTimeout>1000</RequestTimeout>
+						<ResponseTimeout>2000</ResponseTimeout>
+						</Timeout>
+					</Mailbox>
+					<EtherCATController>
+						<DpramSize>8192</DpramSize>
+						<SmCount>8</SmCount>
+						<FmmuCount>8</FmmuCount>
+					</EtherCATController>
+				</Info>
+				<GroupType>AnaIn</GroupType>
+				<Profile>
+					<ChannelInfo>
+						<ProfileNo>5001</ProfileNo>
+						<AddInfo>100</AddInfo>
+					</ChannelInfo>
+					<Dictionary>
+						<DataTypes>
+							<DataType>
+								<Name>BIT2</Name>
+								<BitSize>2</BitSize>
+							</DataType>
+							<DataType>
+								<Name>BIT3</Name>
+								<BitSize>3</BitSize>
+							</DataType>
+							<DataType>
+								<Name>BOOL</Name>
+								<BitSize>1</BitSize>
+							</DataType>
+							<DataType>
+								<Name>BYTE</Name>
+								<BitSize>8</BitSize>
+							</DataType>
+							<DataType>
+								<Name>DINT</Name>
+								<BitSize>32</BitSize>
+							</DataType>
+							<DataType>
+								<Name>INT</Name>
+								<BitSize>16</BitSize>
+							</DataType>
+							<DataType>
+								<Name>REAL</Name>
+								<BitSize>32</BitSize>
+							</DataType>
+							<DataType>
+								<Name>UDINT</Name>
+								<BitSize>32</BitSize>
+							</DataType>
+							<DataType>
+								<Name>UINT</Name>
+								<BitSize>16</BitSize>
+							</DataType>
+							<DataType>
+								<Name>USINT</Name>
+								<BitSize>8</BitSize>
+							</DataType>
+							<DataType>
+								<Name>STRING(4)</Name>
+								<BitSize>40</BitSize>
+							</DataType>
+							<DataType>
+								<Name>STRING(5)</Name>
+								<BitSize>40</BitSize>
+							</DataType>
+							<DataType>
+								<Name>STRING(6)</Name>
+								<BitSize>48</BitSize>
+							</DataType>
+							<DataType>
+								<Name>STRING(8)</Name>
+								<BitSize>64</BitSize>
+							</DataType>
+							<DataType>
+								<Name>STRING(10)</Name>
+								<BitSize>80</BitSize>
+							</DataType>
+							<!-- DT0800EN01 Enum Input type -->
+							<DataType>
+								<Name>DT0800EN01</Name>
+								<BaseType>BOOL</BaseType>
+								<BitSize>1</BitSize>
+								<EnumInfo>
+									<Text>Single ended</Text>
+									<Enum>0</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>Differential</Text>
+									<Enum>1</Enum>
+								</EnumInfo>
+							</DataType>
+							<!-- DT0801EN16 Enum AINsampling rates -->
+							<DataType>
+								<Name>DT0801EN16</Name>
+								<BaseType>UINT</BaseType>
+								<BitSize>16</BitSize>
+								<EnumInfo>
+									<Text>Disable</Text>
+									<Enum>0</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>1Hz</Text>
+									<Enum>1</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>2Hz</Text>
+									<Enum>2</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>5Hz</Text>
+									<Enum>3</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>10Hz</Text>
+									<Enum>4</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>20Hz</Text>
+									<Enum>5</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>50Hz</Text>
+									<Enum>6</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>100Hz</Text>
+									<Enum>7</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>200Hz</Text>
+									<Enum>8</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>500Hz</Text>
+									<Enum>9</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>1kHz</Text>
+									<Enum>10</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>2kHz</Text>
+									<Enum>11</Enum>
+								</EnumInfo>
+							</DataType>
+							<!-- DT0802EN08 Enum Input range -->
+							<DataType>
+								<Name>DT0802EN08</Name>
+								<BaseType>BYTE</BaseType>
+								<BitSize>8</BitSize>
+								<EnumInfo>
+									<Text>+/-10V</Text>
+									<Enum>0</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>+/-5V</Text>
+									<Enum>1</Enum>
+								</EnumInfo>
+							</DataType>
+							<!-- DT0803EN01 Enum Enable -->
+							<DataType>
+								<Name>DT0803EN01</Name>
+								<BaseType>BOOL</BaseType>
+								<BitSize>1</BitSize>
+								<EnumInfo>
+									<Text>Disable</Text>
+									<Enum>0</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>Enable</Text>
+									<Enum>1</Enum>
+								</EnumInfo>
+							</DataType>
+							<!-- DT0805EN16 Enum Diagnostic channel sampling rates -->
+							<DataType>
+								<Name>DT0805EN16</Name>
+								<BaseType>UINT</BaseType>
+								<BitSize>16</BitSize>
+								<EnumInfo>
+									<Text>Disable</Text>
+									<Enum>0</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>1Hz</Text>
+									<Enum>1</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>2Hz</Text>
+									<Enum>2</Enum>
+								</EnumInfo>
+								<EnumInfo>
+									<Text>5Hz</Text>
+									<Enum>3</Enum>
+								</EnumInfo>
+							</DataType>
+							<!-- DT1018 Identity -->
+							<DataType>
+								<Name>DT1018</Name>
+								<BitSize>144</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Vendor ID</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Product code</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>48</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Revision</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>80</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>Serial number</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>112</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1600 RxPDO-Map -->
+							<DataType>
+								<Name>DT1600</Name>
+								<BitSize>176</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>SubIndex 001</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>SubIndex 002</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>48</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>SubIndex 003</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>80</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>SubIndex 004</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>112</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>5</SubIdx>
+									<Name>SubIndex 005</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>144</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- 1Axx data map value -->
+							<DataType>
+								<Name>DT1Axx_DataMapValue</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>SubIndex 001</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1C00ARR -->
+							<DataType>
+								<Name>DT1C00ARR</Name>
+								<BaseType>USINT</BaseType>
+								<BitSize>32</BitSize>
+								<ArrayInfo>
+									<LBound>1</LBound>
+									<Elements>4</Elements>
+								</ArrayInfo>
+							</DataType>
+							<!-- DT1C00 Sync manager -->
+							<DataType>
+								<Name>DT1C00</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<Name>Elements</Name>
+									<Type>DT1C00ARR</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1C12ARR -->
+							<DataType>
+								<Name>DT1C12ARR</Name>
+								<BaseType>UINT</BaseType>
+								<BitSize>16</BitSize>
+								<ArrayInfo>
+									<LBound>1</LBound>
+									<Elements>1</Elements>
+								</ArrayInfo>
+							</DataType>
+							<!-- DT1C12 RxPDO assign -->
+							<DataType>
+								<Name>DT1C12</Name>
+								<BitSize>32</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<Name>Elements</Name>
+									<Type>DT1C12ARR</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1C13ARR -->
+							<DataType>
+								<Name>DT1C13ARR</Name>
+								<BaseType>UINT</BaseType>
+								<BitSize>816</BitSize>
+								<ArrayInfo>
+									<LBound>1</LBound>
+									<Elements>51</Elements>
+								</ArrayInfo>
+							</DataType>
+							<!-- DT1C13 TxPDO assign -->
+							<DataType>
+								<Name>DT1C13</Name>
+								<BitSize>832</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<Name>Elements</Name>
+									<Type>DT1C13ARR</Type>
+									<BitSize>816</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1C32 SM output parameter -->
+							<DataType>
+								<Name>DT1C32</Name>
+								<BitSize>400</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Sync mode</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Cycle time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>32</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Shift time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>64</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>Sync modes supported</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>96</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>5</SubIdx>
+									<Name>Minimum cycle time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>112</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>6</SubIdx>
+									<Name>Calc and copy time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>144</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>8</SubIdx>
+									<Name>Get cycle time</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>208</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>9</SubIdx>
+									<Name>Delay time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>224</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>10</SubIdx>
+									<Name>Sync0 time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>256</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>11</SubIdx>
+									<Name>SM-Event missed counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>288</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>12</SubIdx>
+									<Name>CycleTime too short counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>320</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>13</SubIdx>
+									<Name>Shift too short counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>352</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>32</SubIdx>
+									<Name>Sync error</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>384</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT1C33 SM input parameter -->
+							<DataType>
+								<Name>DT1C33</Name>
+								<BitSize>400</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Sync mode</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Cycle time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>32</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Shift time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>64</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>Sync modes supported</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>96</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>5</SubIdx>
+									<Name>Minimum cycle time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>112</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>6</SubIdx>
+									<Name>Calc and copy time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>144</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>8</SubIdx>
+									<Name>Get cycle time</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>208</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>9</SubIdx>
+									<Name>Delay time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>224</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>10</SubIdx>
+									<Name>Sync0 time</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>256</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>11</SubIdx>
+									<Name>SM-Event missed counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>288</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>12</SubIdx>
+									<Name>CycleTime too short counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>320</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>13</SubIdx>
+									<Name>Shift too short counter</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>352</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>32</SubIdx>
+									<Name>Sync error</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>384</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>c</Category>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT6000 Channel with REAL data value -->
+							<DataType>
+								<Name>DT6000</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Value</Name>
+									<Type>REAL</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>T</PdoMapping>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT6320 Box status -->
+							<DataType>
+								<Name>DT6320</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Value</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>T</PdoMapping>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT7000 Excitation outputs switching -->
+							<DataType>
+								<Name>DT7000</Name>
+								<BitSize>32</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>EXT1</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>R</PdoMapping>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>EXT2</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>17</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>R</PdoMapping>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>EXT5</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>18</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>R</PdoMapping>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>EXT6</Name>
+									<Type>BOOL</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>19</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<PdoMapping>R</PdoMapping>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT8000 AI settings -->
+							<DataType>
+								<Name>DT8000</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Sampling rate</Name>
+									<Type>DT0801EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Range</Name>
+									<Type>DT0802EN08</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>32</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Input type</Name>
+									<Type>DT0800EN01</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>40</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT8080 AI settings -->
+							<DataType>
+								<Name>DT8080</Name>
+								<BitSize>40</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Sampling rate</Name>
+									<Type>DT0801EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Range</Name>
+									<Type>DT0802EN08</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>32</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT8200 Excitation settings full -->
+							<DataType>
+								<Name>DT8200</Name>
+								<BitSize>88</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Output voltage demand</Name>
+									<Type>REAL</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Output voltage sampling rate</Name>
+									<Type>DT0805EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>48</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Output current sampling rate</Name>
+									<Type>DT0805EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>64</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>VBAT mode</Name>
+									<Type>DT0803EN01</Type>
+									<BitSize>1</BitSize>
+									<BitOffs>80</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT8220 Excitation settings reduced -->
+							<DataType>
+								<Name>DT8220</Name>
+								<BitSize>80</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Output voltage demand</Name>
+									<Type>REAL</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>2</SubIdx>
+									<Name>Output voltage sampling rate</Name>
+									<Type>DT0805EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>48</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>3</SubIdx>
+									<Name>Output current sampling rate</Name>
+									<Type>DT0805EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>64</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<!-- DT8300 Internal ADC settings -->
+							<DataType>
+								<Name>DT8300</Name>
+								<BitSize>32</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Internal ADC sampling rate</Name>
+									<Type>DT0805EN16</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+							</DataType>
+						</DataTypes>
+						<!-- *********************** Objects ************************* -->
+						<Objects>
+							<!-- x1000 Device type -->
+							<Object>
+								<Index>#x1000</Index>
+								<Name>Device type</Name>
+								<Type>UDINT</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<DefaultData>89130000</DefaultData>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1001 Error Register -->
+							<Object>
+								<Index>#x1001</Index>
+								<Name>Error Register</Name>
+								<Type>USINT</Type>
+								<BitSize>8</BitSize>
+								<Info>
+									<DefaultData>00</DefaultData>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1008 Device name -->
+							<Object>
+								<Index>#x1008</Index>
+								<Name>Device name</Name>
+								<Type>STRING(5)</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<DefaultData>4541493332</DefaultData>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1009 Hardware version -->
+							<Object>
+								<Index>#x1009</Index>
+								<Name>Hardware version</Name>
+								<Type>STRING(4)</Type>
+								<BitSize>32</BitSize>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x100a Software version -->
+							<Object>
+								<Index>#x100a</Index>
+								<Name>Software version</Name>
+								<Type>STRING(4)</Type>
+								<BitSize>32</BitSize>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1018 Identity -->
+							<Object>
+								<Index>#x1018</Index>
+								<Name>Identity</Name>
+								<Type>DT1018</Type>
+								<BitSize>144</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Vendor ID</Name>
+										<Info>
+											<DefaultData>29070000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Product code</Name>
+										<Info>
+											<DefaultData>6C3F0900</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Revision</Name>
+										<Info>
+											<DefaultData>10000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Serial number</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1600 RxPDO-Map EXT -->
+							<Object>
+								<Index>#x1600</Index>
+								<Name>RxPDO-Map EXT</Name>
+								<Type>DT1600</Type>
+								<BitSize>176</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>05</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+											<DefaultData>01010070</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 002</Name>
+										<Info>
+											<DefaultData>01020070</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 003</Name>
+										<Info>
+											<DefaultData>01030070</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 004</Name>
+										<Info>
+											<DefaultData>01040070</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 005</Name>
+										<Info>
+											<DefaultData>0c000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a00 TxPDO-Map AIN01 -->
+							<Object>
+								<Index>#x1a00</Index>
+								<Name>TxPDO-Map AIN01</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<!-- DefaultData: Object id + Index + data size : 0x6000 + 0x01 + 0x20 (32 bits)-->
+										<DefaultData>20010060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a01 TxPDO-Map AIN02 -->
+							<Object>
+								<Index>#x1a01</Index>
+								<Name>TxPDO-Map AIN02</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20011060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a02 TxPDO-Map AIN03 -->
+							<Object>
+								<Index>#x1a02</Index>
+								<Name>TxPDO-Map AIN03</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20012060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a03 TxPDO-Map AIN04 -->
+							<Object>
+								<Index>#x1a03</Index>
+								<Name>TxPDO-Map AIN04</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20013060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a04 TxPDO-Map AIN05 -->
+							<Object>
+								<Index>#x1a04</Index>
+								<Name>TxPDO-Map AIN05</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20014060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a05 TxPDO-Map AIN06 -->
+							<Object>
+								<Index>#x1a05</Index>
+								<Name>TxPDO-Map AIN06</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20015060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a06 TxPDO-Map AIN07 -->
+							<Object>
+								<Index>#x1a06</Index>
+								<Name>TxPDO-Map AIN07</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20016060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a07 TxPDO-Map AIN08 -->
+							<Object>
+								<Index>#x1a07</Index>
+								<Name>TxPDO-Map AIN08</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20017060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a08 TxPDO-Map AIN09 -->
+							<Object>
+								<Index>#x1a08</Index>
+								<Name>TxPDO-Map AIN09</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20018060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a09 TxPDO-Map AIN10 -->
+							<Object>
+								<Index>#x1a09</Index>
+								<Name>TxPDO-Map AIN10</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20019060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0a TxPDO-Map AIN11 -->
+							<Object>
+								<Index>#x1a0a</Index>
+								<Name>TxPDO-Map AIN11</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001a060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0b TxPDO-Map AIN12 -->
+							<Object>
+								<Index>#x1a0b</Index>
+								<Name>TxPDO-Map AIN12</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001b060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0c TxPDO-Map AIN13 -->
+							<Object>
+								<Index>#x1a0c</Index>
+								<Name>TxPDO-Map AIN13</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001c060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0d TxPDO-Map AIN14 -->
+							<Object>
+								<Index>#x1a0d</Index>
+								<Name>TxPDO-Map AIN14</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001d060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0e TxPDO-Map AIN15 -->
+							<Object>
+								<Index>#x1a0e</Index>
+								<Name>TxPDO-Map AIN15</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001e060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a0f TxPDO-Map AIN16 -->
+							<Object>
+								<Index>#x1a0f</Index>
+								<Name>TxPDO-Map AIN16</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001f060</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a10 TxPDO-Map AIN17 -->
+							<Object>
+								<Index>#x1a10</Index>
+								<Name>TxPDO-Map AIN17</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20010061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a11 TxPDO-Map AIN18 -->
+							<Object>
+								<Index>#x1a11</Index>
+								<Name>TxPDO-Map AIN18</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20011061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a12 TxPDO-Map AIN19 -->
+							<Object>
+								<Index>#x1a12</Index>
+								<Name>TxPDO-Map AIN19</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20012061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a13 TxPDO-Map AIN20 -->
+							<Object>
+								<Index>#x1a13</Index>
+								<Name>TxPDO-Map AIN20</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20013061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a14 TxPDO-Map AIN21 -->
+							<Object>
+								<Index>#x1a14</Index>
+								<Name>TxPDO-Map AIN21</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20014061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a15 TxPDO-Map AIN22 -->
+							<Object>
+								<Index>#x1a15</Index>
+								<Name>TxPDO-Map AIN22</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20015061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a16 TxPDO-Map AIN23 -->
+							<Object>
+								<Index>#x1a16</Index>
+								<Name>TxPDO-Map AIN23</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20016061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a17 TxPDO-Map AIN24 -->
+							<Object>
+								<Index>#x1a17</Index>
+								<Name>TxPDO-Map AIN24</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20017061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a18 TxPDO-Map AIN25 -->
+							<Object>
+								<Index>#x1a18</Index>
+								<Name>TxPDO-Map AIN25</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20018061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a19 TxPDO-Map AIN26 -->
+							<Object>
+								<Index>#x1a19</Index>
+								<Name>TxPDO-Map AIN26</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20019061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1a TxPDO-Map AIN27 -->
+							<Object>
+								<Index>#x1a1a</Index>
+								<Name>TxPDO-Map AIN27</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001a061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1b TxPDO-Map AIN28 -->
+							<Object>
+								<Index>#x1a1b</Index>
+								<Name>TxPDO-Map AIN28</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001b061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1c TxPDO-Map AIN29 -->
+							<Object>
+								<Index>#x1a1c</Index>
+								<Name>TxPDO-Map AIN29</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001c061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1d TxPDO-Map AIN30 -->
+							<Object>
+								<Index>#x1a1d</Index>
+								<Name>TxPDO-Map AIN30</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001d061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1e TxPDO-Map AIN31 -->
+							<Object>
+								<Index>#x1a1e</Index>
+								<Name>TxPDO-Map AIN31</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001e061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a1f TxPDO-Map AIN32 -->
+							<Object>
+								<Index>#x1a1f</Index>
+								<Name>TxPDO-Map AIN32</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001f061</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a20 TxPDO-Map EXCTV1 -->
+							<Object>
+								<Index>#x1a20</Index>
+								<Name>TxPDO-Map EXCTV1</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20010062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a21 TxPDO-Map EXCTV2 -->
+							<Object>
+								<Index>#x1a21</Index>
+								<Name>TxPDO-Map EXCTV2</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20011062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a22 TxPDO-Map EXCTV3 -->
+							<Object>
+								<Index>#x1a22</Index>
+								<Name>TxPDO-Map EXCTV3</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20012062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a23 TxPDO-Map EXCTV4 -->
+							<Object>
+								<Index>#x1a23</Index>
+								<Name>TxPDO-Map EXCTV4</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20013062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a24 TxPDO-Map EXCTV5 -->
+							<Object>
+								<Index>#x1a24</Index>
+								<Name>TxPDO-Map EXCTV5</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20014062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a25 TxPDO-Map EXCTV6 -->
+							<Object>
+								<Index>#x1a25</Index>
+								<Name>TxPDO-Map EXCTV6</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20015062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a26 TxPDO-Map EXCTV7 -->
+							<Object>
+								<Index>#x1a26</Index>
+								<Name>TxPDO-Map EXCTV7</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20016062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a27 TxPDO-Map EXCTV8 -->
+							<Object>
+								<Index>#x1a27</Index>
+								<Name>TxPDO-Map EXCTV8</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20017062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a28 TxPDO-Map EXCTI1 -->
+							<Object>
+								<Index>#x1a28</Index>
+								<Name>TxPDO-Map EXCTI1</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20018062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a29 TxPDO-Map EXCTI2 -->
+							<Object>
+								<Index>#x1a29</Index>
+								<Name>TxPDO-Map EXCTI2</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20019062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2a TxPDO-Map EXCTI3 -->
+							<Object>
+								<Index>#x1a2a</Index>
+								<Name>TxPDO-Map EXCTI3</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001a062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2b TxPDO-Map EXCTI4 -->
+							<Object>
+								<Index>#x1a2b</Index>
+								<Name>TxPDO-Map EXCTI4</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001b062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2c TxPDO-Map EXCTI5 -->
+							<Object>
+								<Index>#x1a2c</Index>
+								<Name>TxPDO-Map EXCTI5</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001c062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2d TxPDO-Map EXCTI6 -->
+							<Object>
+								<Index>#x1a2d</Index>
+								<Name>TxPDO-Map EXCTI6</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001d062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2e TxPDO-Map EXCTI7 -->
+							<Object>
+								<Index>#x1a2e</Index>
+								<Name>TxPDO-Map EXCTI7</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001e062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a2f TxPDO-Map EXCTI8 -->
+							<Object>
+								<Index>#x1a2f</Index>
+								<Name>TxPDO-Map EXCTI8</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>2001f062</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a30 TxPDO-Map TEMP -->
+							<Object>
+								<Index>#x1a30</Index>
+								<Name>TxPDO-Map TEMP</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20010063</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a31 TxPDO-Map VIN -->
+							<Object>
+								<Index>#x1a31</Index>
+								<Name>TxPDO-Map VIN</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20011063</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1a32 TxPDO-Map Status -->
+							<Object>
+								<Index>#x1a32</Index>
+								<Name>TxPDO-Map Status</Name>
+								<Type>DT1Axx_DataMapValue</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+										<DefaultData>20012063</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1c00 Sync manager type -->
+							<Object>
+								<Index>#x1c00</Index>
+								<Name>Sync manager type</Name>
+								<Type>DT1C00</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 002</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 003</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 004</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1c12 RxPDO assign -->
+							<Object>
+								<Index>#x1c12</Index>
+								<Name>RxPDO assign</Name>
+								<Type>DT1C12</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+									<Name>SubIndex 001</Name>
+										<Info>
+											<DefaultData>0016</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1c13 TxPDO assign -->
+							<Object>
+								<Index>#x1c13</Index>
+								<Name>TxPDO assign</Name>
+								<Type>DT1C13</Type>
+								<BitSize>832</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>33</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+											<DefaultData>001a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 002</Name>
+										<Info>
+											<DefaultData>011a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 003</Name>
+										<Info>
+											<DefaultData>021a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 004</Name>
+										<Info>
+											<DefaultData>031a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 005</Name>
+										<Info>
+											<DefaultData>041a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 006</Name>
+										<Info>
+											<DefaultData>051a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 007</Name>
+										<Info>
+											<DefaultData>061a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 008</Name>
+										<Info>
+											<DefaultData>071a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 009</Name>
+										<Info>
+											<DefaultData>081a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 010</Name>
+										<Info>
+											<DefaultData>091a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 011</Name>
+										<Info>
+											<DefaultData>0a1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 012</Name>
+										<Info>
+											<DefaultData>0b1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 013</Name>
+										<Info>
+											<DefaultData>0c1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 014</Name>
+										<Info>
+											<DefaultData>0d1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 015</Name>
+										<Info>
+											<DefaultData>0e1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 016</Name>
+										<Info>
+											<DefaultData>0f1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 017</Name>
+										<Info>
+											<DefaultData>101a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 018</Name>
+										<Info>
+											<DefaultData>111a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 019</Name>
+										<Info>
+											<DefaultData>121a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 020</Name>
+										<Info>
+											<DefaultData>131a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 021</Name>
+										<Info>
+											<DefaultData>141a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 022</Name>
+										<Info>
+											<DefaultData>151a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 023</Name>
+										<Info>
+											<DefaultData>161a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 024</Name>
+										<Info>
+											<DefaultData>171a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 025</Name>
+										<Info>
+											<DefaultData>181a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 026</Name>
+										<Info>
+											<DefaultData>191a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 027</Name>
+										<Info>
+											<DefaultData>1a1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 028</Name>
+										<Info>
+											<DefaultData>1b1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 029</Name>
+										<Info>
+											<DefaultData>1c1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 030</Name>
+										<Info>
+											<DefaultData>1d1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 031</Name>
+										<Info>
+											<DefaultData>1e1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 032</Name>
+										<Info>
+											<DefaultData>1f1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 033</Name>
+										<Info>
+											<DefaultData>201a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 034</Name>
+										<Info>
+											<DefaultData>211a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 035</Name>
+										<Info>
+											<DefaultData>221a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 036</Name>
+										<Info>
+											<DefaultData>231a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 037</Name>
+										<Info>
+											<DefaultData>241a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 038</Name>
+										<Info>
+											<DefaultData>251a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 039</Name>
+										<Info>
+											<DefaultData>261a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 040</Name>
+										<Info>
+											<DefaultData>271a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 041</Name>
+										<Info>
+											<DefaultData>281a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 042</Name>
+										<Info>
+											<DefaultData>291a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 043</Name>
+										<Info>
+											<DefaultData>2a1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 044</Name>
+										<Info>
+											<DefaultData>2b1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 045</Name>
+										<Info>
+											<DefaultData>2c1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 046</Name>
+										<Info>
+											<DefaultData>2d1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 047</Name>
+										<Info>
+											<DefaultData>2e1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 048</Name>
+										<Info>
+											<DefaultData>2f1a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 049</Name>
+										<Info>
+											<DefaultData>301a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 050</Name>
+										<Info>
+											<DefaultData>311a</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 051</Name>
+										<Info>
+											<DefaultData>321a</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1c32 SM output parameter -->
+							<Object>
+								<Index>#x1c32</Index>
+								<Name>SM output parameter</Name>
+								<Type>DT1C32</Type>
+								<BitSize>400</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>32</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync mode</Name>
+										<Info>
+											<DefaultData>0100</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Cycle time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Shift time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync modes supported</Name>
+										<Info>
+											<DefaultData>0780</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Minimum cycle time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Calc and copy time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Get cycle time</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Delay time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync0 time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SM-Event missed counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>CycleTime too short counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Shift too short counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync error</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x1c33 SM input parameter -->
+							<Object>
+								<Index>#x1c33</Index>
+								<Name>SM input parameter</Name>
+								<Type>DT1C33</Type>
+								<BitSize>400</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>32</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync mode</Name>
+										<Info>
+											<DefaultData>2200</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Cycle time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Shift time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync modes supported</Name>
+										<Info>
+											<DefaultData>0780</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Minimum cycle time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Calc and copy time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Get cycle time</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Delay time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync0 time</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SM-Event missed counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>CycleTime too short counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Shift too short counter</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sync error</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+<!-- Inputs -->
+							<!-- x6000 AIN01 -->
+							<Object>
+								<Index>#x6000</Index>
+								<Name>AIN01</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6010 AIN02 -->
+							<Object>
+								<Index>#x6010</Index>
+								<Name>AIN02</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6020 AIN03 -->
+							<Object>
+								<Index>#x6020</Index>
+								<Name>AIN03</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6030 AIN04 -->
+							<Object>
+								<Index>#x6030</Index>
+								<Name>AIN04</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6040 AIN05 -->
+							<Object>
+								<Index>#x6040</Index>
+								<Name>AIN05</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6050 AIN06 -->
+							<Object>
+								<Index>#x6050</Index>
+								<Name>AIN06</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6060 AIN07 -->
+							<Object>
+								<Index>#x6060</Index>
+								<Name>AIN07</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6070 AIN08 -->
+							<Object>
+								<Index>#x6070</Index>
+								<Name>AIN08</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6080 AIN09 -->
+							<Object>
+								<Index>#x6080</Index>
+								<Name>AIN09</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6090 AIN10 -->
+							<Object>
+								<Index>#x6090</Index>
+								<Name>AIN10</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60A0 AIN11 -->
+							<Object>
+								<Index>#x60A0</Index>
+								<Name>AIN11</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60B0 AIN12 -->
+							<Object>
+								<Index>#x60B0</Index>
+								<Name>AIN12</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60C0 AIN13 -->
+							<Object>
+								<Index>#x60C0</Index>
+								<Name>AIN13</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60D0 AIN14 -->
+							<Object>
+								<Index>#x60D0</Index>
+								<Name>AIN14</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60E0 AIN15 -->
+							<Object>
+								<Index>#x60E0</Index>
+								<Name>AIN15</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x60F0 AIN16 -->
+							<Object>
+								<Index>#x60F0</Index>
+								<Name>AIN16</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6100 AIN17 -->
+							<Object>
+								<Index>#x6100</Index>
+								<Name>AIN17</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6110 AIN18 -->
+							<Object>
+								<Index>#x6110</Index>
+								<Name>AIN18</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6120 AIN19 -->
+							<Object>
+								<Index>#x6120</Index>
+								<Name>AIN19</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6130 AIN20 -->
+							<Object>
+								<Index>#x6130</Index>
+								<Name>AIN20</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6140 AIN21 -->
+							<Object>
+								<Index>#x6140</Index>
+								<Name>AIN21</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6150 AIN22 -->
+							<Object>
+								<Index>#x6150</Index>
+								<Name>AIN22</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6160 AIN23 -->
+							<Object>
+								<Index>#x6160</Index>
+								<Name>AIN23</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6170 AIN24 -->
+							<Object>
+								<Index>#x6170</Index>
+								<Name>AIN24</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6180 AIN25 -->
+							<Object>
+								<Index>#x6180</Index>
+								<Name>AIN25</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6190 AIN26 -->
+							<Object>
+								<Index>#x6190</Index>
+								<Name>AIN26</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61A0 AIN27 -->
+							<Object>
+								<Index>#x61A0</Index>
+								<Name>AIN27</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61B0 AIN28 -->
+							<Object>
+								<Index>#x61B0</Index>
+								<Name>AIN28</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61C0 AIN29 -->
+							<Object>
+								<Index>#x61C0</Index>
+								<Name>AIN29</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61D0 AIN30 -->
+							<Object>
+								<Index>#x61D0</Index>
+								<Name>AIN30</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61E0 AIN31 -->
+							<Object>
+								<Index>#x61E0</Index>
+								<Name>AIN31</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x61F0 AIN32 -->
+							<Object>
+								<Index>#x61F0</Index>
+								<Name>AIN32</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6200 Excitation voltage sense input 1 -->
+							<Object>
+								<Index>#x6200</Index>
+								<Name>EXCTV1</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6210 Excitation voltage sense input 2 -->
+							<Object>
+								<Index>#x6210</Index>
+								<Name>EXCTV2</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6220 Excitation voltage sense input 3 -->
+							<Object>
+								<Index>#x6220</Index>
+								<Name>EXCTV3</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6230 Excitation voltage sense input 4 -->
+							<Object>
+								<Index>#x6230</Index>
+								<Name>EXCTV4</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6240 Excitation voltage sense input 5 -->
+							<Object>
+								<Index>#x6240</Index>
+								<Name>EXCTV5</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6250 Excitation voltage sense input 6 -->
+							<Object>
+								<Index>#x6250</Index>
+								<Name>EXCTV6</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6260 Excitation voltage sense input 7 -->
+							<Object>
+								<Index>#x6260</Index>
+								<Name>EXCTV7</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6270 Excitation voltage sense input 8 -->
+							<Object>
+								<Index>#x6270</Index>
+								<Name>EXCTV8</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6280 Excitation current sense input 1 -->
+							<Object>
+								<Index>#x6280</Index>
+								<Name>EXCTI1</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6290 Excitation current sense input 2 -->
+							<Object>
+								<Index>#x6290</Index>
+								<Name>EXCTI2</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62A0 Excitation current sense input 3 -->
+							<Object>
+								<Index>#x62A0</Index>
+								<Name>EXCTI3</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62B0 Excitation current sense input 4 -->
+							<Object>
+								<Index>#x62B0</Index>
+								<Name>EXCTI4</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62C0 Excitation current sense input 5 -->
+							<Object>
+								<Index>#x62C0</Index>
+								<Name>EXCTI5</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62D0 Excitation current sense input 6 -->
+							<Object>
+								<Index>#x62D0</Index>
+								<Name>EXCTI6</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62E0 Excitation current sense input 7 -->
+							<Object>
+								<Index>#x62E0</Index>
+								<Name>EXCTI7</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x62F0 Excitation current sense input 8 -->
+							<Object>
+								<Index>#x62F0</Index>
+								<Name>EXCTI8</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6300 Box temperature -->
+							<Object>
+								<Index>#x6300</Index>
+								<Name>TEMP</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6310 Box input voltage -->
+							<Object>
+								<Index>#x6310</Index>
+								<Name>VIN</Name>
+								<Type>DT6000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x6320 Box status -->
+							<Object>
+								<Index>#x6320</Index>
+								<Name>Status</Name>
+								<Type>DT6320</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Value</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+<!-- Outputs -->
+							<!-- x7000 Excitation output switching -->
+							<Object>
+								<Index>#x7000</Index>
+								<Name>EXT Outputs</Name>
+								<Type>DT7000</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>EXT1</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>EXT2</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>EXT5</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>EXT6</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+<!-- Settings -->
+							<!-- x8000 AIN01 settings -->
+							<Object>
+								<Index>#x8000</Index>
+								<Name>AIN01 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8010 AIN02 settings -->
+							<Object>
+								<Index>#x8010</Index>
+								<Name>AIN02 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8020 AIN03 settings -->
+							<Object>
+								<Index>#x8020</Index>
+								<Name>AIN03 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8030 AIN04 settings -->
+							<Object>
+								<Index>#x8030</Index>
+								<Name>AIN04 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8040 AIN05 settings -->
+							<Object>
+								<Index>#x8040</Index>
+								<Name>AIN05 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8050 AIN06 settings -->
+							<Object>
+								<Index>#x8050</Index>
+								<Name>AIN06 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8060 AIN07 settings -->
+							<Object>
+								<Index>#x8060</Index>
+								<Name>AIN07 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8070 AIN08 settings -->
+							<Object>
+								<Index>#x8070</Index>
+								<Name>AIN08 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8080 AIN09 settings -->
+							<Object>
+								<Index>#x8080</Index>
+								<Name>AIN09 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8090 AIN10 settings -->
+							<Object>
+								<Index>#x8090</Index>
+								<Name>AIN10 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80a0 AIN11 settings -->
+							<Object>
+								<Index>#x80a0</Index>
+								<Name>AIN11 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80b0 AIN12 settings -->
+							<Object>
+								<Index>#x80b0</Index>
+								<Name>AIN12 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80c0 AIN13 settings -->
+							<Object>
+								<Index>#x80c0</Index>
+								<Name>AIN13 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80d0 AIN14 settings -->
+							<Object>
+								<Index>#x80d0</Index>
+								<Name>AIN14 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80e0 AIN15 settings -->
+							<Object>
+								<Index>#x80e0</Index>
+								<Name>AIN15 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x80f0 AIN16 settings -->
+							<Object>
+								<Index>#x80f0</Index>
+								<Name>AIN16 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8100 AIN17 settings -->
+							<Object>
+								<Index>#x8100</Index>
+								<Name>AIN17 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8110 AIN18 settings -->
+							<Object>
+								<Index>#x8110</Index>
+								<Name>AIN18 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8120 AIN19 settings -->
+							<Object>
+								<Index>#x8120</Index>
+								<Name>AIN19 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8130 AIN20 settings -->
+							<Object>
+								<Index>#x8130</Index>
+								<Name>AIN20 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8140 AIN21 settings -->
+							<Object>
+								<Index>#x8140</Index>
+								<Name>AIN21 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8150 AIN22 settings -->
+							<Object>
+								<Index>#x8150</Index>
+								<Name>AIN22 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8160 AIN23 settings -->
+							<Object>
+								<Index>#x8160</Index>
+								<Name>AIN23 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8170 AIN24 settings -->
+							<Object>
+								<Index>#x8170</Index>
+								<Name>AIN24 settings</Name>
+								<Type>DT8000</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Input type</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8180 AIN25 settings -->
+							<Object>
+								<Index>#x8180</Index>
+								<Name>AIN25 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8190 AIN26 settings -->
+							<Object>
+								<Index>#x8190</Index>
+								<Name>AIN26 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81a0 AIN27 settings -->
+							<Object>
+								<Index>#x81a0</Index>
+								<Name>AIN27 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81b0 AIN28 settings -->
+							<Object>
+								<Index>#x81b0</Index>
+								<Name>AIN28 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81c0 AIN29 settings -->
+							<Object>
+								<Index>#x81c0</Index>
+								<Name>AIN29 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81d0 AIN30 settings -->
+							<Object>
+								<Index>#x81d0</Index>
+								<Name>AIN30 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81e0 AIN31 settings -->
+							<Object>
+								<Index>#x81e0</Index>
+								<Name>AIN31 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x81f0 AIN32 settings -->
+							<Object>
+								<Index>#x81f0</Index>
+								<Name>AIN32 settings</Name>
+								<Type>DT8080</Type>
+								<BitSize>40</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>02</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Sampling rate</Name>
+										<Info>
+											<DefaultData>0400</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Range</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8200 EXCT1 settings -->
+							<Object>
+								<Index>#x8200</Index>
+								<Name>EXCT1 settings</Name>
+								<Type>DT8200</Type>
+								<BitSize>88</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>VBAT mode</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8210 EXCT2 settings -->
+							<Object>
+								<Index>#x8210</Index>
+								<Name>EXCT2 settings</Name>
+								<Type>DT8200</Type>
+								<BitSize>88</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>VBAT mode</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8220 EXCT3 settings -->
+							<Object>
+								<Index>#x8220</Index>
+								<Name>EXCT3 settings</Name>
+								<Type>DT8220</Type>
+								<BitSize>80</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8230 EXCT4 settings -->
+							<Object>
+								<Index>#x8230</Index>
+								<Name>EXCT4 settings</Name>
+								<Type>DT8220</Type>
+								<BitSize>80</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8240 EXCT5 settings -->
+							<Object>
+								<Index>#x8240</Index>
+								<Name>EXCT5 settings</Name>
+								<Type>DT8200</Type>
+								<BitSize>88</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>VBAT mode</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8250 EXCT6 settings -->
+							<Object>
+								<Index>#x8250</Index>
+								<Name>EXCT6 settings</Name>
+								<Type>DT8200</Type>
+								<BitSize>88</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>04</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>VBAT mode</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8260 EXCT7 settings -->
+							<Object>
+								<Index>#x8260</Index>
+								<Name>EXCT7 settings</Name>
+								<Type>DT8220</Type>
+								<BitSize>80</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8270 EXCT8 settings -->
+							<Object>
+								<Index>#x8270</Index>
+								<Name>EXCT8 settings</Name>
+								<Type>DT8220</Type>
+								<BitSize>80</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>03</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage demand</Name>
+										<Info>
+											<DefaultData>00000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output voltage sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Output current sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8300 Box temperarature sense settings -->
+							<Object>
+								<Index>#x8300</Index>
+								<Name>TEMP settings</Name>
+								<Type>DT8300</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Internal ADC sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+							<!-- x8310 Box VIN sense settings -->
+							<Object>
+								<Index>#x8310</Index>
+								<Name>VIN settings</Name>
+								<Type>DT8300</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Internal ADC sampling rate</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+								<Flags>
+									<Access>rw</Access>
+									<Category>o</Category>
+								</Flags>
+							</Object>
+						</Objects>
+					</Dictionary>
+				</Profile>
+				<Fmmu>Outputs</Fmmu>
+				<Fmmu>Inputs</Fmmu>
+				<Fmmu>MBoxState</Fmmu>
+				<Sm MinSize="32" MaxSize="192" DefaultSize="128" StartAddress="#x1000" ControlByte="#x26" Enable="1">MBoxOut</Sm>
+				<Sm MinSize="32" MaxSize="192" DefaultSize="128" StartAddress="#x1400" ControlByte="#x22" Enable="1">MBoxIn</Sm>
+				<Sm DefaultSize="2" StartAddress="#x1800" ControlByte="#x64" Enable="1">Outputs</Sm>
+				<Sm DefaultSize="204" StartAddress="#x1c00" ControlByte="#x20" Enable="1">Inputs</Sm>
+				<RxPdo Fixed="1" Mandatory="1" Sm="2">
+					<Index>#x1600</Index>
+					<Name>EXT Outputs</Name>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>EXT1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>EXT2</Name>
+						<DataType>BOOL</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>EXT5</Name>
+						<DataType>BOOL</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>EXT6</Name>
+						<DataType>BOOL</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x0</Index>
+						<BitLen>12</BitLen>
+					</Entry>
+				</RxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a00</Index>
+					<Name>AIN01</Name>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a01</Index>
+					<Name>AIN02</Name>
+					<Entry>
+						<Index>#x6010</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a02</Index>
+					<Name>AIN03</Name>
+					<Entry>
+						<Index>#x6020</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a03</Index>
+					<Name>AIN04</Name>
+					<Entry>
+						<Index>#x6030</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a04</Index>
+					<Name>AIN05</Name>
+					<Entry>
+						<Index>#x6040</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a05</Index>
+					<Name>AIN06</Name>
+					<Entry>
+						<Index>#x6050</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a06</Index>
+					<Name>AIN07</Name>
+					<Entry>
+						<Index>#x6060</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a07</Index>
+					<Name>AIN08</Name>
+					<Entry>
+						<Index>#x6070</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a08</Index>
+					<Name>AIN09</Name>
+					<Entry>
+						<Index>#x6080</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a09</Index>
+					<Name>AIN10</Name>
+					<Entry>
+						<Index>#x6090</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0a</Index>
+					<Name>AIN11</Name>
+					<Entry>
+						<Index>#x60a0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0b</Index>
+					<Name>AIN12</Name>
+					<Entry>
+						<Index>#x60b0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0c</Index>
+					<Name>AIN13</Name>
+					<Entry>
+						<Index>#x60c0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0d</Index>
+					<Name>AIN14</Name>
+					<Entry>
+						<Index>#x60d0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0e</Index>
+					<Name>AIN15</Name>
+					<Entry>
+						<Index>#x60e0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a0f</Index>
+					<Name>AIN16</Name>
+					<Entry>
+						<Index>#x60f0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a10</Index>
+					<Name>AIN17</Name>
+					<Entry>
+						<Index>#x6100</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a11</Index>
+					<Name>AIN18</Name>
+					<Entry>
+						<Index>#x6110</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a12</Index>
+					<Name>AIN19</Name>
+					<Entry>
+						<Index>#x6120</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a13</Index>
+					<Name>AIN20</Name>
+					<Entry>
+						<Index>#x6130</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a14</Index>
+					<Name>AIN21</Name>
+					<Entry>
+						<Index>#x6140</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a15</Index>
+					<Name>AIN22</Name>
+					<Entry>
+						<Index>#x6150</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a16</Index>
+					<Name>AIN23</Name>
+					<Entry>
+						<Index>#x6160</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a17</Index>
+					<Name>AIN24</Name>
+					<Entry>
+						<Index>#x6170</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a18</Index>
+					<Name>AIN25</Name>
+					<Entry>
+						<Index>#x6180</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a19</Index>
+					<Name>AIN26</Name>
+					<Entry>
+						<Index>#x6190</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1a</Index>
+					<Name>AIN27</Name>
+					<Entry>
+						<Index>#x61a0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1b</Index>
+					<Name>AIN28</Name>
+					<Entry>
+						<Index>#x61b0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1c</Index>
+					<Name>AIN29</Name>
+					<Entry>
+						<Index>#x61c0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1d</Index>
+					<Name>AIN30</Name>
+					<Entry>
+						<Index>#x61d0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1e</Index>
+					<Name>AIN31</Name>
+					<Entry>
+						<Index>#x61e0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a1f</Index>
+					<Name>AIN32</Name>
+					<Entry>
+						<Index>#x61f0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a20</Index>
+					<Name>EXCTV1</Name>
+					<Entry>
+						<Index>#x6200</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a21</Index>
+					<Name>EXCTV2</Name>
+					<Entry>
+						<Index>#x6210</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a22</Index>
+					<Name>EXCTV3</Name>
+					<Entry>
+						<Index>#x6220</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a23</Index>
+					<Name>EXCTV4</Name>
+					<Entry>
+						<Index>#x6230</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a24</Index>
+					<Name>EXCTV5</Name>
+					<Entry>
+						<Index>#x6240</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a25</Index>
+					<Name>EXCTV6</Name>
+					<Entry>
+						<Index>#x6250</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a26</Index>
+					<Name>EXCTV7</Name>
+					<Entry>
+						<Index>#x6260</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a27</Index>
+					<Name>EXCTV8</Name>
+					<Entry>
+						<Index>#x6270</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a28</Index>
+					<Name>EXCTI1</Name>
+					<Entry>
+						<Index>#x6280</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a29</Index>
+					<Name>EXCTI2</Name>
+					<Entry>
+						<Index>#x6290</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2a</Index>
+					<Name>EXCTI3</Name>
+					<Entry>
+						<Index>#x62a0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2b</Index>
+					<Name>EXCTI4</Name>
+					<Entry>
+						<Index>#x62b0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2c</Index>
+					<Name>EXCTI5</Name>
+					<Entry>
+						<Index>#x62c0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2d</Index>
+					<Name>EXCTI6</Name>
+					<Entry>
+						<Index>#x62d0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2e</Index>
+					<Name>EXCTI7</Name>
+					<Entry>
+						<Index>#x62e0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a2f</Index>
+					<Name>EXCTI8</Name>
+					<Entry>
+						<Index>#x62f0</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a30</Index>
+					<Name>TEMP</Name>
+					<Entry>
+						<Index>#x6300</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a31</Index>
+					<Name>VIN</Name>
+					<Entry>
+						<Index>#x6310</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>REAL</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="1" Sm="3">
+					<Index>#x1a32</Index>
+					<Name>Status</Name>
+					<Entry>
+						<Index>#x6320</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>32</BitLen>
+						<Name>Value</Name>
+						<DataType>UDINT</DataType>
+					</Entry>
+				</TxPdo>
+				<Mailbox DataLinkLayer="true">
+					<CoE SdoInfo="true" SegmentedSdo="true" CompleteAccess="true" />
+					<FoE />
+				</Mailbox>
+				<Dc>
+					<OpMode>
+						<Name>Synchron</Name>
+						<Desc>FreeRun/SM-Synchron</Desc>
+						<AssignActivate>#x0</AssignActivate>
+						<CycleTimeSync0 Factor="0">0</CycleTimeSync0>
+						<ShiftTimeSync0>0</ShiftTimeSync0>
+						<CycleTimeSync1 Factor="1">0</CycleTimeSync1>
+						<ShiftTimeSync1>0</ShiftTimeSync1>
+					</OpMode>
+					<OpMode>
+						<Name>DC</Name>
+						<Desc>DC-Synchron</Desc>
+						<AssignActivate>#x700</AssignActivate>
+						<CycleTimeSync0 Factor="1">0</CycleTimeSync0>
+						<ShiftTimeSync0>0</ShiftTimeSync0>
+						<CycleTimeSync1 Factor="0">0</CycleTimeSync1>
+						<ShiftTimeSync1>0</ShiftTimeSync1>
+					</OpMode>          
+				</Dc>
+				<Eeprom>
+					<ByteSize>2048</ByteSize>
+					<ConfigData>8000E000E8030000000000000000</ConfigData>
+					<BootStrap>0010800000148000</BootStrap>
+				</Eeprom>
+			</Device>
+		</Devices>
+	</Descriptions>
+</EtherCATInfo>

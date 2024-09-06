@@ -1,0 +1,12 @@
+[package]
+name = "esi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+xml-rs = "0.8.19"
+xsd-macro-utils = { git = "https://github.com/lumeohq/xsd-parser-rs", version = "0.1.0" }
+xsd-parser = { git = "https://github.com/lumeohq/xsd-parser-rs", version = "0.1.0" }
+xsd-types = { git = "https://github.com/lumeohq/xsd-parser-rs", version = "0.1.0" }
+yaserde = "0.7.1"
+yaserde_derive = "0.7.1"
